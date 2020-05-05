@@ -2,24 +2,20 @@
     For this first problem fix the function
     so that if the input text is a pallendrome, it returns True.
     And if not, it returns false.
-
     Try running it on some samples to make sure it works
 """
-
-
 def checkisPallendrome(text):
-    result = False
+    result = (text.replace(" ", "") == (text.replace(" ", ""))[::-1])
     return result
-
 
 def tester(text, expected_result):
     actual_result = checkisPallendrome(text)
 
-    print_text = "The text was: " + str(text) + " | "
+    print_text = "The text was: " + str(text)
     if expected_result == actual_result:
-        print_text += "Correct: " + str(expected_result) + " == " + str(actual_result)
+        print_text += "\nCorrect: " + str(expected_result) + " == " + str(actual_result)
     else:
-        print_text += "Incorrect: " + str(expected_result) + " != " + str(actual_result)
+        print_text += "\nIncorrect: " + str(expected_result) + " != " + str(actual_result)
     return print_text
 
 
@@ -34,4 +30,6 @@ if __name__ == "__main__":
     # Test it like this
     print(tester(text0, False))
     print(tester(text1, True))
+    print(tester(text2, False))
+    print(tester(text3, True))
     print(tester(text4, False))
