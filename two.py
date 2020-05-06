@@ -1,12 +1,7 @@
-""" Playing with Functions 
-    For this second problem use only the function calls available and the starting variable to make ALL of the print statements correct.
-    Note you may only modify the characters to the left of result = ...
-    You may not modify any other lines of code, you may not use symbols like '+', '*', '//', '/', or '-'
-"""
-
-
 def performCalculations(value):
-    result = value
+
+    result = f2(f4(value), f3(f2(f2(f1(value, value), f1(value, value)), f1(value, value)), value))
+
     return result
 
 
